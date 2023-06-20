@@ -1,1 +1,24 @@
-<p>header works!</p>
+
+<header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <div class="logo">
+      <img src="https://cdn.dribbble.com/users/3267379/screenshots/6098927/e_shop.jpg" alt="Logo">
+      <h1>MegaMinds Digitals</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/"><i class="fa-solid fa-house" style="color: #3E5151;"></i></a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle">Category <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/option1">Computer</a></li>
+            <li><a routerLink="/option2">Laptop</a></li>
+            <li><a routerLink="/option3">Mobile Phones</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
