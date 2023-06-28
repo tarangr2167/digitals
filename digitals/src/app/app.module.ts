@@ -6,13 +6,18 @@ import { AppComponent } from './app.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './header/header.component';
+import { DialogComponentComponent } from './dialog-component/dialog-component.component';
+import { CartService } from './cart.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    DialogComponentComponent
+    
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,4 +29,4 @@ import { HeaderComponent } from './header/header.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

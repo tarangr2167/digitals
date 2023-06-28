@@ -9,39 +9,21 @@
     <p class="product-description">Description: {{computer.Description}}</p>
     <span class="product-price">Price: ₹{{computer.Price}}</span><br>
     <span class="product-quantity">Quantity: {{computer.Available_quantiy}}</span><br>
-    <button mat-raised-button class="product-button"  (click)="openPopup()" id="{{computer.id}}">Buy</button>
+    <button mat-raised-button class="product-button"  (click)="addToProduct(computer)" id="{{computer.id}}">Add to cart</button>
   </div>
 
+
+
+</div>
+<div class="container">
+<button class="glow-on-hover" (click)=" openDialog()">Buy</button>
+
 </div>
 
+<ul>
+  <li *ngFor="let item of productdata">
+    {{ item.computer_name }}
+  </li>
+</ul>
 
-<!-- <table>
-    <thead>
-        <th>Id:</th>
-        <th>BrandName:</th>
-        <th>Description:</th>
-        <th>Price:</th>
-        <th>Quantity:</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let computer of computer_datas">
-            <td>{{computer.id}}</td>
-            <td>{{computer.computer_name}}</td>
-            <td>{{computer.Description}}</td>
-            <td>{{computer.Price}}</td>
-            <td>{{computer.id}}</td>
-        </tr>
-    </tbody>
-</table> -->
-<!-- <form #addproduct = "ngForm">
-    <div class="product-container">
-        <img class="product-image" src="product-image.jpg" alt="Product Image">
-        <div class="product-details">
-          <div class="product-name">Dell</div>
-          <div class="product-price">$19.99</div>
-          <div class="product-description">Description</div>
-        </div>
-      </div>
 
-</form> -->
-</div>
