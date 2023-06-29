@@ -1,6 +1,7 @@
+
 <ul>
-    <li *ngFor="let item of finaldata">
-      {{ item.computer_name }}
+    <li *ngFor="let item of productdata">
+      {{ item.computer_name | json}}
     </li>
   </ul>
 

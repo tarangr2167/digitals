@@ -1,22 +1,49 @@
+// import { Injectable } from '@angular/core';
+// import { AppComponent } from './app.component';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class CartService {
+//   public productData: any[] = [];
+
+//   constructor() { }
+
+//   setProductData(data: any[]): void {
+//     this.productData = data;
+//     console.log(this.productData)
+//     debugger
+    
+//   }
+
+//   getProductData(): any[] {
+
+//     return this.productData;
+    
+
+//   }
+
+
 import { Injectable } from '@angular/core';
-import { AppComponent } from './app.component';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  productdata: any[] = [];
+  private productDataSubject = new BehaviorSubject<any[]>([]);
+  public productData$ = this.productDataSubject.asObservable();
+  
+  isDialogOpen = false;
+  constructor() { }
 
-  updateProductData(newData: any[]) {
-    this.productdata = newData;
+  setProductData(data: any[]): void {
+    this.productDataSubject.next(data);
+    console.log(this.productDataSubject.value);
   }
-
-  getProductData(): any[] {
-    return this.productdata;
-  }
-
-
-
-
 }
+
+
+
+// }
 

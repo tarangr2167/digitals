@@ -26,23 +26,27 @@
     title = 'digitals';
     selected_data:any;
     computer_datas: Computer[]=computer_data;
-    productdata: any[] = []; 
+    productData: any[] = []; 
 
+    
     addToProduct(Computer: any) {
-      this.productdata.push(Computer);
-      localStorage.setItem("adata", JSON.stringify(this.productdata));
-      console.log(this.productdata)
+      this.productData.push(Computer);
+      localStorage.setItem("adata", JSON.stringify(this.productData));
+
+
     }
 
+  
     constructor(private dialog: MatDialog, private _service : CartService) {
+      // _service.setProductData(this.productData);
       
     }
-    updateList() {
-      const updatedData = this.productdata// Update the list as needed
-      this._service.updateProductData(updatedData);
-    }
 
-    ngOnInit(){}
+    // updateList() {
+    //   const updatedData = this.productdata// Update the list as needed
+    //   this._service.updateProductData(updatedData);
+    // }
+
 
 
   
@@ -52,6 +56,8 @@
       width: '250px',
       data: { message: 'This is the popup content!' }
     });
+    this._service.setProductData(this.productData);
+    this._service.isDialogOpen = true;
 
   }
 
