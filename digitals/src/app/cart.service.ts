@@ -23,9 +23,9 @@
 
 //   }
 
-
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { AppComponent } from './app.component';
 
 @Injectable({
   providedIn: 'root'
@@ -34,14 +34,20 @@ export class CartService {
   private productDataSubject = new BehaviorSubject<any[]>([]);
   public productData$ = this.productDataSubject.asObservable();
   
-  isDialogOpen = false;
-  constructor() { }
+  dialogOpened = false;
+  constructor() {  }
 
+
+  
   setProductData(data: any[]): void {
     this.productDataSubject.next(data);
     console.log(this.productDataSubject.value);
+
+    
   }
+  
 }
+
 
 
 

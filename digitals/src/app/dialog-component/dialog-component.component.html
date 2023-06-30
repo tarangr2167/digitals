@@ -1,7 +1,21 @@
 
-<ul>
-    <li *ngFor="let item of productdata">
-      {{ item.computer_name | json}}
-    </li>
-  </ul>
+<div class="dialog-content">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4sVQAawldzlpls_KyBLbD3hzSZidAmFIizQ&usqp=CAU" alt="Close" class="close-image" (click)="closeDialog()" style="height: 20px; width: 20px;">
 
+
+    <div *ngFor="let item of productdata ; let i = index">
+     <!-- Item-{{i+1}}&nbsp;<img src={{item.url}} alt="Product Image" style="width: 40px; height: 40px;"> &nbsp;&nbsp; {{ item.computer_name | json}} &nbsp;&nbsp;&nbsp; Quantity: {{item.Available_quantiy}} &nbsp;&nbsp;&nbsp; Price: {{item.Price | json}} -->
+     <table style="padding-top: 20px; " >
+      <td style=" padding-left: 30px;">Item: {{i+1}}</td>&nbsp;
+      <td style=" padding-left: 30px;"><img src={{item.url}} alt="Product Image" style="width: 40px; height: 40px; vertical-align: middle; "></td>&nbsp;&nbsp;&nbsp;
+      <td style=" padding-left: 30px;">{{ item.computer_name | json}}</td>&nbsp;&nbsp;&nbsp;
+      <td style=" padding-left: 30px;">Quantity: {{item.Available_quantiy}}</td>&nbsp;&nbsp;&nbsp;
+      <td style=" padding-left: 30px;">Price: {{item.Price | json}}</td>
+
+
+    </table>
+
+    </div>
+
+  </div>
+   

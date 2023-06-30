@@ -6,17 +6,17 @@
 <div class="product-card" *ngFor="let computer of computer_datas">
     <img src={{computer.url}} alt="Product Image">
     <h3 class="product-title">BrandName: {{computer.computer_name}}</h3>
-    <p class="product-description">Description: {{computer.Description}}</p>
+    <p class="product-description" style="max-lines: 2;">Description: {{computer.Description}}</p>
     <span class="product-price">Price: ₹{{computer.Price}}</span><br>
     <span class="product-quantity">Quantity: {{computer.Available_quantiy}}</span><br>
-    <button mat-raised-button class="product-button"  (click)="addToProduct(computer)" id="{{computer.id}}">Add to cart</button>
+    <button mat-raised-button style="display: inline-block; background-color: #fff; justify-content: center; align-content: center; align-self: center;"  (click)="addToProduct(computer)" id="{{computer.id}}">Add to cart</button>
   </div>
 
 
 
 </div>
 <div class="container" >
-<button class="glow-on-hover" (click)=" openDialog()">Buy</button>
+<button class="glow-on-hover" (click)=" openDialog()">Open Cart</button>
 
 </div>
 

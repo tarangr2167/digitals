@@ -44,4 +44,9 @@ export class DialogComponentComponent implements OnInit {
       console.log(this.productdata);
     });
   }
+  closeDialog(){
+    if(!this.cartService.dialogOpened){
+    this.cartService.dialogOpened = false;
+  }
+  }
 }

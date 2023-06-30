@@ -8,3 +8,18 @@
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+
+ .dialogline{
+  display:list-item;
+ }
+
+ .dialog-content {
+  position: relative;
+}
+
+.close-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

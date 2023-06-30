@@ -28,38 +28,32 @@
     computer_datas: Computer[]=computer_data;
     productData: any[] = []; 
 
+
+
     
-    addToProduct(Computer: any) {
+  addToProduct(Computer: any) {
       this.productData.push(Computer);
       localStorage.setItem("adata", JSON.stringify(this.productData));
 
 
     }
 
-  
-    constructor(private dialog: MatDialog, private _service : CartService) {
-      // _service.setProductData(this.productData);
-      
-    }
-
-    // updateList() {
-    //   const updatedData = this.productdata// Update the list as needed
-    //   this._service.updateProductData(updatedData);
-    // }
-
-
-
-  
-    
+  constructor(private dialog: MatDialog, private _service : CartService) {}
+ 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogComponentComponent, {
-      width: '250px',
-      data: { message: 'This is the popup content!' }
-    });
+    if (!this._service.dialogOpened) {
+      const dialogRef = this.dialog.open(DialogComponentComponent, {
+        width: '2500px',
+        data: { message: 'This is the popup content!' },
+        
+      });
     this._service.setProductData(this.productData);
-    this._service.isDialogOpen = true;
+     this._service.dialogOpened = true;
+
+
 
   }
 
 
 }
+  }

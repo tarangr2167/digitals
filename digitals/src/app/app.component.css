@@ -41,16 +41,22 @@
   } */
   .multi_card{
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between; 
       margin-left: 10px;
       margin-bottom: 20px;
       margin-right: 10px;
+ 
+      /* display: grid;
+      grid-template: 1fr 1fr 1fr / repeat(200px, minmax(200px, 1fr));
+      grid-gap: 1rem; */
   }
   .product-card {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     width: 225px;
+    margin-top: 20px;
   }
   
   .product-card img {
@@ -80,14 +86,14 @@
   .product-button {
     display: inline-block;
     padding: 8px 12px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
     text-decoration: none;
     border-radius: 4px;
     margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     
   }
   .popup {
