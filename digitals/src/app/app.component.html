@@ -9,7 +9,7 @@
     <p class="product-description" style="max-lines: 2;">Description: {{computer.Description}}</p>
     <span class="product-price">Price: ₹{{computer.Price}}</span><br>
     <span class="product-quantity">Quantity: {{computer.Available_quantiy}}</span><br>
-    <button mat-raised-button style="display: inline-block; background-color: #fff; justify-content: center; align-content: center; align-self: center;"  (click)="addToProduct(computer)" id="{{computer.id}}">Add to cart</button>
+    <div class="container"><button class="btn"  (click)="addToProduct(computer)" id="{{computer.id}}">Add to cart</button></div>
   </div>
 
 

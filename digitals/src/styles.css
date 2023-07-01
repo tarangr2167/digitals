@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+.btn {
+    width: 6.5em;
+    height: 30px;
+    margin: 0.5em;
+    background: black;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    align-items: center;
+   }
+   
+   button:hover {
+    color: rgb(255, 255, 255);
+   }
+   
+   button:after {
+    content: "";
+    background: rgb(5, 27, 74);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    -webkit-transform: skewX(-45deg) scale(0, 1);
+        -ms-transform: skewX(-45deg) scale(0, 1);
+            transform: skewX(-45deg) scale(0, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+   
+   button:hover:after {
+    -webkit-transform: skewX(-45deg) scale(1, 1);
+        -ms-transform: skewX(-45deg) scale(1, 1);
+            transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
